@@ -1,0 +1,170 @@
+.custom-cursor {
+    cursor: url("imgs/Pinsel.png"), auto;
+}
+
+.header {
+
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-grow: 1;
+    padding: 40px;
+    border-radius: 40px;
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    
+}
+
+#headline {
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+#headline.disappear {
+    opacity: 0;
+}
+
+
+body
+{
+     /*background-color: var(--hautpfarbe);*/
+    
+     transition: background 0.3s ease; 
+    
+}
+
+#zeichnenCanvas {
+    display: flex;
+    border: 4px solid black; /* Für die Sichtbarkeit des Canvas-Rahmens */
+    margin: auto;
+   
+    /* Hinzufügen weiterer Stile nach Bedarf */
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.spalte {
+    flex: 1;
+    min-width: 250px;
+}
+
+#tipp {
+    flex: 0 0 auto; /* Flex-Basis auf auto und kein Wachstum oder Schrumpfen */
+    width: 100px; /* Feste Breite für das kleine Kästchen */
+    height: 100px; /* Feste Höhe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+#tippingrau {
+    flex: 0 0 auto; /* Flex-Basis auf auto und kein Wachstum oder Schrumpfen */
+    width: 100px; /* Feste Breite für das kleine Kästchen */
+    height: 100px; /* Feste Höhe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    color: rgb(88, 81, 81);
+}
+
+#tippinweiss {
+    flex: 0 0 auto; /* Flex-Basis auf auto und kein Wachstum oder Schrumpfen */
+    width: 100px; /* Feste Breite für das kleine Kästchen */
+    height: 100px; /* Feste Höhe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+#text-spalte, #bild-spalte {
+    flex: 1 1 0;
+}
+
+#text-spalte{
+    width: 100px; /* Feste Breite für das kleine Kästchen */
+    height: 200px; /* Feste Höhe */
+    background-color: rgba(241, 135, 14, 0.2); /*  Hintergrund mit 20% Opazität */
+    color: #000; /* Schwarzer Text */
+    padding: 10px;
+}
+
+#bild-spalte img {
+    width: 100%;
+    height: auto;
+}
+
+.vertical-line {
+    width: 20px; /* Breite der Linie */
+    height: 400px; /* Höhe der Linie */
+    background-color: #000; /* Farbe der Linie; hier schwarz */
+    margin-left: 50%; /* Optional: zum Zentrieren der Linie */
+    margin-right: 50%; /* Optional: zum Zentrieren der Linie */
+    transition: transform 0.3s, opacity 0.3s; /* Animation für Transform und Opacity */
+    transform: translateY(-50%); /* Startet außerhalb des oberen Bildschirmrandes */
+    opacity: 0; /* Startet unsichtbar */
+}
+
+.vertical-line.animate {
+    transform: translateY(0); /* Endzustand: in normaler Position */
+    opacity: 1; /* Endzustand: voll sichtbar */
+}
+
+
+    
+.link-stil {
+background-color: #f89d4d; /* Grüner Hintergrund */
+color: rgb(83, 7, 7); /* Weiße Schrift */
+padding: 15px 32px; /* Padding oben/unten und rechts/links */
+text-align: center; /* Zentrierter Text */
+text-decoration: none; /* Keine Unterstreichung */
+display: inline-block; /* Behält die Button-Form bei */
+font-size: 16px; /* Schriftgröße */
+margin: 4px 2px; /* Außenabstand */
+cursor: pointer; /* Cursor wird zum Klickzeiger */
+border: none; /* Kein Rahmen */
+}
+
+.content {
+    height: 200px; /* Platzhalterinhalt für die Webseite */
+    position: relative;
+}
+
+#scrollToTopButton {
+    display: none; /* Verstecken, bis der Benutzer scrollt */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 10px 20px;
+    background-color: #c61b1b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+@media (hover: none) and (pointer: coarse) { 
+
+} /* In der Moblie-Version ausblenden
