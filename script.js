@@ -1,3 +1,6 @@
+
+// 1 Funktion Zeichnen auf Canvas
+
 document.addEventListener("DOMContentLoaded", function() {
     const canvas = document.getElementById("zeichnenCanvas");
     const ctx = canvas.getContext("2d");
@@ -53,104 +56,107 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-//Background Scrolling
+// 2 Background Scrolling
 
-window.addEventListener('scroll', function() {
-    var scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    var colorPercent = scrollPercent * 80;
-  
-    document.body.style.background = `linear-gradient(to bottom, lightyellow ${colorPercent}%, darkred, black)`;
-  });
-
-  // JavaScript, um den Button anzuzeigen/auszublenden, wenn der Benutzer scrollt
-  var scrollToTopButton = document.getElementById("scrollToTopButton");
-
-  // Diese Funktion wird aufgerufen, wenn der Benutzer auf den Button klickt
-  function scrollToTop() {
-      window.scrollTo({
-          top: 0,
-          behavior: "smooth" // Scrollen erfolgt animiert
-      });
-  }
-
-// JavaScript, um den Button anzuzeigen/auszublenden, wenn der Benutzer scrollt
-var scrollToTopButton = document.getElementById("scrollToTopButton");
-
-// Diese Funktion wird aufgerufen, wenn der Benutzer auf den Button klickt
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth" // Scrollen erfolgt animiert
+    window.addEventListener('scroll', function() {
+        var scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+        var colorPercent = scrollPercent * 80;
+    
+        document.body.style.background = `linear-gradient(to bottom, lightyellow ${colorPercent}%, darkred, black)`;
     });
-}
 
-// Diese Funktion überprüft die Scrollposition, um den Button anzuzeigen/auszublenden
-function toggleScrollToTopButton() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopButton.style.display = "block";
-    } else {
-        scrollToTopButton.style.display = "none";
+    // JavaScript, um den Button anzuzeigen/auszublenden, wenn der Benutzer scrollt
+    var scrollToTopButton = document.getElementById("scrollToTopButton");
+
+    // Diese Funktion wird aufgerufen, wenn der Benutzer auf den Button klickt
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Scrollen erfolgt animiert
+        });
     }
-}
 
-// Fügen Sie einen Event-Listener hinzu, um die Scroll-Position zu überwachen
-window.onscroll = function() {
-    toggleScrollToTopButton();
-};
+    
+  
+  // 3 Button
 
-// Fügen Sie einen Event-Listener hinzu, um den Button-Klick zu verarbeiten
-scrollToTopButton.addEventListener("click", scrollToTop);
+    var scrollToTopButton = document.getElementById("scrollToTopButton");
 
+    // Diese Funktion wird aufgerufen, wenn der Benutzer auf den Button klickt
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Scrollen erfolgt animiert
+        });
+    }
 
-document.getElementById('headline').addEventListener('mouseover', function() {
-    this.classList.add('disappear');
-});
-
-document.getElementById('headline').addEventListener('mouseleave', function() {
-    this.classList.remove('disappear');
-});
-
-const line = document.querySelector('.vertical-line');
-
-window.addEventListener('scroll', () => {
-    const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    const newWidth = Math.min(100, 1 + scrollPercentage * 100); // Maximalbreite auf 100px beschränken
-    line.style.borderLeftWidth = newWidth + 'px';
-});
-
-
-// Funktion Animation der Linien
-
-let observerOptions = {
-    rootMargin: '0px',
-    threshold: 0.5 // Element ist zu 50% sichtbar
-};
-
-var observer = new IntersectionObserver(observerCallback, observerOptions);
-
-function observerCallback(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
+    // Diese Funktion überprüft die Scrollposition, um den Button anzuzeigen/auszublenden
+    function toggleScrollToTopButton() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopButton.style.display = "block";
         } else {
-            entry.target.classList.remove('animate');
+            scrollToTopButton.style.display = "none";
         }
+    }
+
+    // Fügen Sie einen Event-Listener hinzu, um die Scroll-Position zu überwachen
+    window.onscroll = function() {
+        toggleScrollToTopButton();
+    };
+
+    // Fügen Sie einen Event-Listener hinzu, um den Button-Klick zu verarbeiten
+    scrollToTopButton.addEventListener("click", scrollToTop);
+
+
+    document.getElementById('headline').addEventListener('mouseover', function() {
+        this.classList.add('disappear');
     });
-};
 
-let target = '.vertical-line';
-document.querySelectorAll(target).forEach((i) => {
-    observer.observe(i);
-});
+    document.getElementById('headline').addEventListener('mouseleave', function() {
+        this.classList.remove('disappear');
+    });
+
+    const line = document.querySelector('.vertical-line');
+
+    window.addEventListener('scroll', () => {
+        const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+        const newWidth = Math.min(100, 1 + scrollPercentage * 100); // Maximalbreite auf 100px beschränken
+        line.style.borderLeftWidth = newWidth + 'px';
+    });
 
 
-document.getElementById("meinElement").addEventListener("mouseover", function() {
-    this.classList.add("custom-cursor");
-});
+// 4 Funktion Animation der Linien
 
-document.getElementById("meinElement").addEventListener("mouseout", function() {
-    this.classList.remove("custom-cursor");
-});
+    let observerOptions = {
+        rootMargin: '0px',
+        threshold: 0.5 // Element ist zu 50% sichtbar
+    };
+
+    var observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    function observerCallback(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            } else {
+                entry.target.classList.remove('animate');
+            }
+        });
+    };
+
+    let target = '.vertical-line';
+    document.querySelectorAll(target).forEach((i) => {
+        observer.observe(i);
+    });
+
+
+    document.getElementById("meinElement").addEventListener("mouseover", function() {
+        this.classList.add("custom-cursor");
+    });
+
+    document.getElementById("meinElement").addEventListener("mouseout", function() {
+        this.classList.remove("custom-cursor");
+    });
 
 
 // Dieses Skript fügt die `custom-cursor`-Klasse zu einem Element hinzu, wenn der Mauszeiger darüber schwebt, und entfernt sie wieder, wenn der Mauszeiger das Element verlässt.

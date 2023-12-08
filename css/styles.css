@@ -1,7 +1,3 @@
-.custom-cursor {
-    cursor: url("imgs/Pinsel.png"), auto;
-}
-
 .header {
 
     text-align: center;
@@ -13,8 +9,7 @@
     font-family: 'Arial', sans-serif;
     font-size: 40px;
     font-style: italic;
-    font-weight: 700;
-    
+    font-weight: 700;   
 }
 
 #headline {
@@ -26,21 +21,40 @@
     opacity: 0;
 }
 
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Passen Sie die Höhe nach Bedarf an */
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sorgt dafür, dass das Video den Container vollständig ausfüllt */
+}
+
+.video-background h1 {
+    position: absolute;
+    top: 50%; /* Zentriert den Titel vertikal */
+    left: 50%; /* Zentriert den Titel horizontal */
+    transform: translate(-50%, -50%); /* Verschiebt den Titel, um eine exakte Zentrierung zu erreichen */
+    color: white; /* Farbe des Titels */
+    /* Weitere Stilisierungen für den Titel nach Bedarf */
+}
+
+#zeichnenCanvas {
+    display: flex;
+    border: 10px solid #e0b038; /* Für die Sichtbarkeit des Canvas-Rahmens */
+    margin: auto;
+}
 
 body
 {
      /*background-color: var(--hautpfarbe);*/
     
      transition: background 0.3s ease; 
-    
-}
-
-#zeichnenCanvas {
-    display: flex;
-    border: 4px solid black; /* Für die Sichtbarkeit des Canvas-Rahmens */
-    margin: auto;
-   
-    /* Hinzufügen weiterer Stile nach Bedarf */
+     font-family: 'Arial';
 }
 
 
@@ -54,6 +68,38 @@ body
 .spalte {
     flex: 1;
     min-width: 250px;
+}
+
+#tippanimate{
+    flex: 0 0 auto; /* Flex-Basis auf auto und kein Wachstum oder Schrumpfen */
+    width: 100px; /* Feste Breite für das kleine Kästchen */
+    height: 100px; /* Feste Höhe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+
+ /* Zusätzliche Eigenschaften für die Animation */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: typing 4s steps(10) 1s  normal both,
+               blink-caret .75s step-end 1s normal both;
+}
+
+/* Animation für das "Tippen" */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; } /* Anpassen an die gewünschte Breite */
+}
+
+/* Animation für den blinkenden Cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
 }
 
 #tipp {
@@ -80,7 +126,7 @@ body
     font-size: 40px;
     font-style: italic;
     font-weight: 700;
-    color: rgb(88, 81, 81);
+    color: rgb(45, 43, 43);
 }
 
 #tippinweiss {
@@ -104,10 +150,27 @@ body
 
 #text-spalte{
     width: 100px; /* Feste Breite für das kleine Kästchen */
-    height: 200px; /* Feste Höhe */
+    height: 240px; /* Feste Höhe */
     background-color: rgba(241, 135, 14, 0.2); /*  Hintergrund mit 20% Opazität */
     color: #000; /* Schwarzer Text */
     padding: 10px;
+}
+
+#text-spalte-grau{
+    width: 100px; /* Feste Breite für das kleine Kästchen */
+    height: 240px; /* Feste Höhe */
+    background-color: rgba(241, 135, 14, 0.2); /*  Hintergrund mit 20% Opazität */
+    color: rgb(45, 43, 43);
+    padding: 10px;
+}
+
+#text-spalte-weiss{
+    width: 100px; /* Feste Breite für das kleine Kästchen */
+    height: 240px; /* Feste Höhe */
+    background-color: rgba(241, 135, 14, 0.2); /*  Hintergrund mit 20% Opazität */
+    color: rgb(255, 255, 255);
+    padding: 10px;
+
 }
 
 #bild-spalte img {
@@ -118,7 +181,7 @@ body
 .vertical-line {
     width: 20px; /* Breite der Linie */
     height: 400px; /* Höhe der Linie */
-    background-color: #000; /* Farbe der Linie; hier schwarz */
+    background-color: #e0b038; /* Farbe der Linie; hier schwarz */
     margin-left: 50%; /* Optional: zum Zentrieren der Linie */
     margin-right: 50%; /* Optional: zum Zentrieren der Linie */
     transition: transform 0.3s, opacity 0.3s; /* Animation für Transform und Opacity */
@@ -131,19 +194,17 @@ body
     opacity: 1; /* Endzustand: voll sichtbar */
 }
 
-
-    
+   
 .link-stil {
-background-color: #f89d4d; /* Grüner Hintergrund */
-color: rgb(83, 7, 7); /* Weiße Schrift */
-padding: 15px 32px; /* Padding oben/unten und rechts/links */
+color: rgb(0, 0, 0); /* Schwarze Schrift */
+padding: 10px 20px; /* Padding oben/unten und rechts/links */
 text-align: center; /* Zentrierter Text */
 text-decoration: none; /* Keine Unterstreichung */
 display: inline-block; /* Behält die Button-Form bei */
 font-size: 16px; /* Schriftgröße */
 margin: 4px 2px; /* Außenabstand */
 cursor: pointer; /* Cursor wird zum Klickzeiger */
-border: none; /* Kein Rahmen */
+border: 1px solid #000; /* Rahmen */
 }
 
 .content {
@@ -157,14 +218,44 @@ border: none; /* Kein Rahmen */
     bottom: 40px;
     right: 40px;
     padding: 10px 20px;
-    background-color: #c61b1b;
-    color: #fff;
+    background-color: #e0b038;
+    color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
 }
 
 
+footer {
+    background-color: rgb(0, 0, 0); /* Dunkler Hintergrund */
+    color: white; /* Weiße Schriftfarbe */
+    text-align: center; /* Zentriert den Text */
+    padding: 20px 0; /* Vertikaler Abstand oben und unten */
+    font-size: 0.9em; /* Leicht verkleinerte Schriftgröße */
+    display: flex; /* Aktiviert Flexbox */
+    justify-content: center; /* Zentriert die Elemente horizontal */
+    align-items: center; /* Zentriert die Elemente vertikal */
+}
 
-@media (hover: none) and (pointer: coarse) { 
+footer p {
+    margin: 10px 0; /* Abstand zwischen den Absätzen */
+}
 
-} /* In der Moblie-Version ausblenden
+footer a {
+    color: #6c757d; /* Farbe der Hyperlinks */
+    text-decoration: none; /* Entfernt die Unterstreichung der Links */
+    margin: 10px; /* Gleicher Abstand wie bei <p> */
+}
+
+footer a:hover {
+    color: #e0b038; /* Farbe der Hyperlinks beim Darüberfahren */
+}
+
+
+@media (max-width: 768px) {
+    .element-to-hide,
+    .canvas { 
+        display: none;
+    }
+}
+
+     /* In der Moblie-Version ausblenden

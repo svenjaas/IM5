@@ -11,45 +11,59 @@
     <title>Document</title>
 
     <header class="header">
-        <h1>Tipps, um Kreativlockaden</h1>
-        <h2 id="headline">a u f z u l ö s e n</h2>
+
+        <div class="video-background">
+            <video autoplay loop muted>
+                <source src="videos/AnimationSvenja.mp4" type="video/mp4">
+                Ihr Browser unterstützt keine Video-Tags.
+            </video>
+            <h1 id="headline"> Tipps, um Kreativlockaden a u f z u l ö s e n</h1>   
+        </div>
+       
     </header>
 
 </head>
 
 <body>
-    <div class="custom-cursor">
-    <div class="spalte" id="tipp">
-        <p>Zuerst hier unten deinen Frust rauslassen</p>
+ 
+    <div class="spalte" id="tippanimate">
+        <p class="element-to-hide">Zuerst hier unten deinen Frust rauslassen</p>
     </div>
-</div>
 
-    <canvas id="zeichnenCanvas" width="800" height="400"></canvas>
+
+    <canvas id="zeichnenCanvas" class="element-to-hide" width="800" height="400"></canvas>
 
 
     <div class="content">
         <!-- Hier wird der Button erstellt -->
-        <button id="scrollToTopButton">Start again</button>
+        <button id="scrollToTopButton">Start fresh</button>
     </div>
 
-    <div class="container">
+ <div class="container">
 
-                <div class="spalte" id="tipp">
-                    <p>Dann</p>
-                </div>
+     <div class="spalte" id="tipp">
+               <p>Dann</p>
+         </div>
 
-                <div class="spalte" id="text-spalte">
-                    <h2>Relativieren</h2>
-                    <p>Veränderung der Umgebung kann neue Ideen stimulieren. Arbeite an einem neuen Ort,
-                        wie einem Café, einem Park oder einem anderen Zimmer.</p>
-                    <a href="https://www.google.com/maps" class="link-stil">Cafés in deiner Nähe suchen</a>
-                </div>
+            <div class="spalte" id="text-spalte">
+                 <h2>Neue Sichtweisen einnehmen</h2>
+                <p> Im Gewohnten sieht ein neuer Blick, hinter die Fassaden von Strukturen und Sachlichem das Ungewohnte, Spannedes
+                    oder vielleicht sogar Magie.In Farben malt sich die Welt, in Gefühlen und Gedanken werden sie wahrgenommen. 
+                    Eine Sache der Perspektive, denn vieles ist relativ relativ. 
+                    Was wir Bedeutung schenken, dem schenken wir Leben.
+                    Bedeutung kann unterschiedlich gedeutet werden.
+                    Achte dich darauf, was du Bedeutung schenkst.
+                    Was hat Gewicht verdient, was weniger?
+                       
+                 </p>
+                    
+            </div>
 
 
                 <div class="spalte" id="bild-spalte">
                 <img src="imgs/Relativ.jpg" alt="Umgebung">
                 </div>
-    </div>
+</div>
 
 <!--linine-->
 <div class="vertical-line"></div>
@@ -66,7 +80,7 @@
                         dann auch weg. Gruppiere deine Sachen und mach Platz um Klarheit in deinen 
                         Kopf zu bekommen.
                     </p>
-                    <a href="https://www.google.com/maps" class="link-stil">Lerne eine neue Ausmist-Methode</a>
+
                 </div>
 
 
@@ -75,8 +89,7 @@
                 </div>
         </div>    
 
-        
-        
+      
 
 <!--linine-->
 <div class="vertical-line"></div>
@@ -84,15 +97,15 @@
          <div class="container">
 
                 <div class="spalte" id="tipp">
-                    <p>Zweitens</p>
+                    <p>Auch gut ist</p>
                 </div>
 
                 <div class="spalte" id="text-spalte">
                     <h2>Umdekorieren</h2>
-                    <p>Veränderung der Umgebung kann neue Ideen stimulieren. Arbeite an einem neuen Ort,
-                        wie einem Café, einem Park oder einem anderen Zimmer.
+                    <p>Manchmal braucht es nur wenig Veränderung, um frischen Wind in deinen Kopf zu bringen.
+                    Du könntest ein bisschen umdekrorieren.
                     </p>
-                    <a href="https://www.google.com/maps" class="link-stil">Cafés in deiner Nähe suchen</a>
+  
                 </div>
 
 
@@ -111,11 +124,11 @@
                 <p>Und</p>
             </div>
         
-            <div class="spalte" id="text-spalte">
+            <div class="spalte" id="text-spalte-grau">
                 <h2>Mal raus</h2>
                 <p>Veränderung der Umgebung kann neue Ideen stimulieren. Arbeite an einem neuen Ort,
                     wie einem Café, einem Park oder einem anderen Zimmer.</p>
-                <a href="https://www.google.com/maps" class="link-stil">Cafés in deiner Nähe suchen</a>
+                <a href="https://www.google.com/maps" class="link-stil">Wo liegt der nächste Park?</a>
             </div>
         
         
@@ -134,10 +147,10 @@
                     <p>Auch gut ist</p>
                 </div>
 
-                <div class="spalte" id="text-spalte">
+                <div class="spalte" id="text-spalte-grau">
                     <h2>Sich austauschen</h2>
-                    <p>Veränderung der Umgebung kann neue Ideen stimulieren. Arbeite an einem neuen Ort,
-                        wie einem Café, einem Park oder einem anderen Zimmer.</p>
+                    <p>Egal wie erfahren man ist, es gibt immer etwas Neues zu lernen, 
+                        und manchmal kommen die besten Ratschläge von den unerwartetsten Personen. </p>
                     <a href="https://www.google.com/maps" class="link-stil">Cafés in deiner Nähe suchen</a>
                 </div>
 
@@ -158,12 +171,12 @@
                     <p>Ausserdem</p>
                 </div>
 
-                <div class="spalte" id="text-spalte">
+                <div class="spalte" id="text-spalte-weiss">
                     <h2>Ausrangieren</h2>
                     <p>Aussortieren kann den Kopf freier machen und helfen sich auf 
                         die Dinge zu konzentrieren, die wirklich wichtig sind. 
                     </p>
-                    <a href="https://www.google.com/maps" class="link-stil">Cafés in deiner Nähe suchen</a>
+                    
                 </div>
 
 
@@ -180,27 +193,33 @@
             <div class="container">
 
                 <div class="spalte" id="tippinweiss">
-                    <p>Ein Joker ist</p>
+                    <p>Wie wärs mit</p>
                 </div>
 
-                <div class="spalte" id="text-spalte">
-                    <h2>Alte Methoden </h2>
-                    <p>Vielleicht es so angehen wie ganz früher mal?
+                <div class="spalte" id="text-spalte-weiss">
+                    <h2>Alten Methoden </h2>
+                    <p>Vielleicht es so angehen, wie ganz früher mal?
                     </p>
-                    <a href="https://www.google.com/maps" class="link-stil">Cafés in deiner Nähe suchen</a>
+                   
                 </div>
 
 
                 <div class="spalte" id="bild-spalte">
                 <img src="imgs/Alte Methoden.jpg" alt="Umgebung">
-                </div>
-                    
+                </div>                  
         
  </div>
+
 
         
 <!-- Verknüpfung mit dem Scrip.js -->
 <script src="script.js"></script> 
+
+<footer class="footer">
+    <p>&copy; 2023 Svenja Liv Sempach | </p>
+    <a href="mailto:info@svenjasempach.ch">info@svenjasempach.ch</a>
+</footer>
+
 </body>
 
 </html>
